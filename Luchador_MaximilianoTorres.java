@@ -76,22 +76,20 @@ public class Luchador {
 		return faccionLuchador;
 	}
 	
-	public void mostrar() {
-	System.out.println("Luchador:");
+		public void mostrarLuchador() {
 	System.out.println("Nombre = "+getNombre());
-	System.out.println("Facción = "+getFaccion()+"\n");
-	System.out.println("Estadísticas:");
-	System.out.println("Ataque = "+getAtk());
-	System.out.println("Def = "+getDef());
-	System.out.println("Speed = "+getSpd());
-	System.out.println("Hp = "+getHp());
+	System.out.println("FacciÃ³n = "+getFaccion());
 	System.out.println("Estrellas = "+getRarity());
 	}
-	public static void main(String[]args) {
-		Luchador l1 = new Luchador();
-		l1.mostrar();
+	public void mostrarEstadisticas() {
+		System.out.println("EstadÃ­sticas:");
+		System.out.println("Ataque = "+getAtk());
+		System.out.println("Def = "+getDef());
+		System.out.println("Speed = "+getSpd());
+		System.out.println("Hp = "+getHp());
 		
 	}
+
 	}
 
 
