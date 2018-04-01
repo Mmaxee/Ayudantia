@@ -61,9 +61,9 @@ public class objetoEquipable {
 		return baseFinal;
 	}
 	public void mostrar() {
-		System.out.println("Estadística base : "+getBase());
+		System.out.println("EstadÃ­stica base : "+getBase());
 		System.out.println("Estrellas : "+getRarity());
-		System.out.println("Estadística final : "+getBaseFinal());
+		System.out.println("EstadÃ­stica final : "+getBaseFinal());
 	}
 
 	}
