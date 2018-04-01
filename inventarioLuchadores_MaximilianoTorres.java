@@ -12,15 +12,15 @@ public class inventarioLuchadores {
 		System.out.println("1. Agregar luchador");
         System.out.println("2. Quitar luchador");
         System.out.println("3. Mostrar Luchadores");
-        System.out.println("4. Ver estadísticas de un luchador");
-        System.out.println("5. Filtar por facción");
+        System.out.println("4. Ver estadÃ­sticas de un luchador");
+        System.out.println("5. Filtar por facciÃ³n");
         System.out.println("6. Filtrar por rareza");
         System.out.println("7. Salir");
             o = sc.nextInt();
         switch (o) {
             case 1:
                 agregarLuchador(luchadores);
-                System.out.println("Creación realizada :D" );
+                System.out.println("CreaciÃ³n realizada :D" );
                 break;
 
             case 2:
@@ -58,7 +58,7 @@ public class inventarioLuchadores {
 	}
 	public static void quitarLuchador(ArrayList<Luchador> luchadorsito) {
 		System.out.println("**********************************************************");
-		System.out.println("Que luchador desea eliminar, guíese por el [x]");
+		System.out.println("Que luchador desea eliminar, guÃ­ese por el [x]");
 		Scanner sc = new Scanner(System.in);
 		int i = sc.nextInt();
 		luchadorsito.remove(i-1);
@@ -70,7 +70,7 @@ public class inventarioLuchadores {
 		}
 	}
 	public static void mostrarEstadistica(ArrayList<Luchador> luchadorsito) {
-		System.out.println("De que luchador desea ver sus estadísticas, guíese por el [x]");
+		System.out.println("De que luchador desea ver sus estadÃ­sticas, guÃ­ese por el [x]");
 		Scanner sc = new Scanner(System.in);
 		int i = sc.nextInt();
 		luchadorsito.get(i-1).mostrarEstadisticas();
@@ -80,7 +80,7 @@ public class inventarioLuchadores {
 		ArrayList<Luchador> faccion = new ArrayList<>();
 		int aux = 0 ;
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Filtrar por , guíese por [x]:");
+		System.out.println("Filtrar por , guÃ­ese por [x]:");
     	System.out.println("Fire[1]");
     	System.out.println("Water[2]");
     	System.out.println("Earth[3]");
@@ -132,7 +132,7 @@ public class inventarioLuchadores {
 		ArrayList<Luchador> Rarity = new ArrayList<>();
 		int aux = 0 ;
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Filtrar por , guíese por [x]:");
+		System.out.println("Filtrar por , guÃ­ese por [x]:");
     	System.out.println("1 Estrella[1]");
     	System.out.println("2 Estrellas[2]");
     	System.out.println("3 Estrellas[3]");
