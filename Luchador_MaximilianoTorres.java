@@ -11,10 +11,10 @@ public class Luchador {
 	
 	public Luchador() {
 		setRarity();
-		atk = (nAzar.nextInt(51)+20)*(getRarity());
-		def = (nAzar.nextInt(21)+5)*(getRarity());
-		spd = (nAzar.nextInt(91)+10)*(getRarity());
-		hp = (nAzar.nextInt(301)+200)*(getRarity());
+		this.atk = (nAzar.nextInt(51)+20)*(getRarity());
+		this.def = (nAzar.nextInt(21)+5)*(getRarity());
+		this.spd = (nAzar.nextInt(91)+10)*(getRarity());
+		this.hp = (nAzar.nextInt(301)+200)*(getRarity());
 		setNombre();
 		setFaccion();
 	}
