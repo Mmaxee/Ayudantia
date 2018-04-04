@@ -133,15 +133,13 @@ public class inventarioLuchadores {
 		int aux = 0 ;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Filtrar por , guíese por [x]:");
-    	System.out.println("1 Estrella[1]");
-    	System.out.println("2 Estrellas[2]");
-    	System.out.println("3 Estrellas[3]");
-    	System.out.println("4 Estrellas[4]");
-    	System.out.println("5 Estrellas[5]");
-    	aux = sc.nextInt();
-    	switch (aux){
+    		System.out.println("1 Estrella[1]");
+    		System.out.println("2 Estrellas[2]");
+    		System.out.println("3 Estrellas[3]");
+    		System.out.println("4 Estrellas[4]");
+    		System.out.println("5 Estrellas[5]");
+    		aux = sc.nextInt();
     	
-    	case 1:
     		for(int i=0; i<luchadorsito.size(); i++) {
     			if(luchadorsito.get(i).getRarity() == 1) {
     				Rarity.add(luchadorsito.get(i));
@@ -150,64 +148,6 @@ public class inventarioLuchadores {
     		for(int i=0; i<Rarity.size();i++) {
     			System.out.println("Luchador ["+(i+1)+"]");
     			Rarity.get(i).mostrarLuchador();	
-    	}
-    		break;
-    	
-    		
-    		
-    	case 2:
-    		for(int i=0; i<luchadorsito.size(); i++) {
-				if(luchadorsito.get(i).getRarity() == 2) {
-					Rarity.add(luchadorsito.get(i));
-					}
-				}
-			for(int i=0; i<Rarity.size();i++) {
-				System.out.println("Luchador ["+(i+1)+"]");
-				Rarity.get(i).mostrarLuchador();	
-			}		
-				break;
-		
-				
-				
-    	case 3:
-			for(int i=0; i<luchadorsito.size(); i++) {
-				if(luchadorsito.get(i).getRarity() == 3) {
-					Rarity.add(luchadorsito.get(i));
-					}
-				}
-			for(int i=0; i<Rarity.size();i++) {
-				System.out.println("Luchador ["+(i+1)+"]");
-				Rarity.get(i).mostrarLuchador();	
-			}
-				break;
-    	
-				
-    	case 4:
-    		for(int i=0; i<luchadorsito.size(); i++) {
-    			if(luchadorsito.get(i).getRarity() == 4) {
-    				Rarity.add(luchadorsito.get(i));
-				}
-			}
-    		for(int i=0; i<Rarity.size();i++) {
-    			System.out.println("Luchador ["+(i+1)+"]");
-    			Rarity.get(i).mostrarLuchador();	
-    		}	
-			break;
-			
-			
-    	case 5:
-    		for(int i=0; i<luchadorsito.size(); i++) {
-    			if(luchadorsito.get(i).getRarity() == 5) {
-    				Rarity.add(luchadorsito.get(i));
-				}
-			}
-    		for(int i=0; i<Rarity.size();i++) {
-    			System.out.println("Luchador ["+(i+1)+"]");
-    			Rarity.get(i).mostrarLuchador();	
-    		}	
-			break;
-			
-			
     		}
     	
 	    }	
