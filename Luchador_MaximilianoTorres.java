@@ -2,10 +2,7 @@ import java.util.Random;
 public class Luchador {
 
 	Random nAzar = new Random();
-	private int Atk;
-	private int Def;
-	private int Spd;
-	private int Hp;
+	private int atk,def,spd,hp;
 	private int probabilidad;
 	private String[] nombres = {"Goku","Vegeta","Freezer","Gohan","Jiren","Topo","Android17","Hit","Beerus","Whis","Kale","Cabbe","Krilin","Dyspo","Caulifla"};
 	private String nombreLuchador;
@@ -14,39 +11,39 @@ public class Luchador {
 	
 	public Luchador() {
 		setRarity();
-		setAtk();
-		setDef();
-		setSpd();
-		setHp();
+		atk = (nAzar.nextInt(51)+20)*(getRarity());
+		def = (nAzar.nextInt(21)+5)*(getRarity());
+		spd = (nAzar.nextInt(91)+10)*(getRarity());
+		hp = (nAzar.nextInt(301)+200)*(getRarity());
 		setNombre();
 		setFaccion();
 	}
 	public int getAtk() {
-		return Atk;
+		return atk;
 	}
-	public void setAtk() {
-		Atk = (nAzar.nextInt(51)+20)*(getRarity());
+	public void setAtk(int atk) {
+		this.atk = atk;
 	}
 	public int getDef() {
-		return Def;
+		return def;
 	}
-	public void setDef() {
-		Def = (nAzar.nextInt(21)+5)*(getRarity());
+	public void setDef(int def) {
+		this.def = def;
 	}
 	public int getSpd() {
-		return Spd;
+		return spd;
 	}
-	public void setSpd() {
-		Spd = (nAzar.nextInt(91)+10)*(getRarity());
+	public void setSpd(int spd) {
+	 this.spd = spd;
 	}
 	public int getHp() {
-		return Hp;
+		return hp;
 	}
-	public void setHp() {
-		Hp = (nAzar.nextInt(301)+200)*(getRarity());
+	public void setHp(int hp) {
+		this.hp = hp;
 	}
 	public int getRarity() {
-		return probabilidad;
+		return probabilidad
 	}
 	public void setRarity() {
 		   int random= (int) (Math.random() * 100 + 1);
