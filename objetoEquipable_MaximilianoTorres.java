@@ -7,8 +7,8 @@ public class objetoEquipable {
 	private int baseFinal;
 	
 	public objetoEquipable() {
+		base = (int) (Math.random()*9+1);
 		setRarity();
-		setBase();
 		setBaseFinal();
 	}
 	
@@ -48,8 +48,8 @@ public class objetoEquipable {
 			    probabilidad=10;
 			        }
 		}
-	public void setBase() {
-		base = (int) (Math.random()*9+1);
+	public void setBase(int base) {
+		this.base = base ;
 	}
 	public int getBase() {
 		return base;
