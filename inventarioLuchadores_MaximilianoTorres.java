@@ -78,56 +78,25 @@ public class inventarioLuchadores {
 	
 	public static void filtroFaccion(ArrayList<Luchador> luchadorsito) {
 		ArrayList<Luchador> faccion = new ArrayList<>();
-		int aux = 0 ;
+		String aux  ;
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Filtrar por , guíese por [x]:");
-    	System.out.println("Fire[1]");
-    	System.out.println("Water[2]");
-    	System.out.println("Earth[3]");
-    	aux = sc.nextInt();
-    	switch (aux){
+		System.out.println("Filtrar por , escriba el nombre correctamente:");
+    		System.out.println("Fire");
+    		System.out.println("Water");
+    		System.out.println("Earth");
+    		aux = sc.nextLine();
     	
-    	case 1:
     		for(int i=0; i<luchadorsito.size(); i++) {
-    			if(luchadorsito.get(i).getFaccion() == "Fire") {
+    			if(luchadorsito.get(i).getFaccion().equals(aux)) {
     				faccion.add(luchadorsito.get(i));
     				}
     			}
     		for(int i=0; i<faccion.size();i++) {
     			System.out.println("Luchador ["+(i+1)+"]");
     			faccion.get(i).mostrarLuchador();	
-    	}
-    		
-    			break;
-    	
-    	case 2:
-    		for(int i=0; i<luchadorsito.size(); i++) {
-				if(luchadorsito.get(i).getFaccion() == "Water") {
-					faccion.add(luchadorsito.get(i));
-					}
-				}
-			for(int i=0; i<faccion.size();i++) {
-				System.out.println("Luchador ["+(i+1)+"]");
-				faccion.get(i).mostrarLuchador();	
-		}
-			
-				break;
-				
-    	case 3:
-			for(int i=0; i<luchadorsito.size(); i++) {
-				if(luchadorsito.get(i).getFaccion() == "Earth") {
-					faccion.add(luchadorsito.get(i));
-					}
-				}
-			for(int i=0; i<faccion.size();i++) {
-				System.out.println("Luchador ["+(i+1)+"]");
-				faccion.get(i).mostrarLuchador();	
-		}
-
-    	
-				break;
-    	}
-    }
+    		}
+	}
+	
 	public static void filtroRarity(ArrayList<Luchador> luchadorsito) {
 		ArrayList<Luchador> Rarity = new ArrayList<>();
 		int aux = 0 ;
