@@ -7,7 +7,7 @@ public class objetoEquipable {
 	private int baseFinal;
 	
 	public objetoEquipable() {
-		base = (int) (Math.random()*9+1);
+		this.base = (int) (Math.random()*9+1);
 		setRarity();
 		setBaseFinal();
 	}
