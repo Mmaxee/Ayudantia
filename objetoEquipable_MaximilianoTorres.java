@@ -5,11 +5,14 @@ public class objetoEquipable {
 	private int probabilidad;
 	private int base;
 	private int baseFinal;
+	private String[] atributoAzar = {"Atk","Def","Spd","Hp"};
+	private String atributoMejorado;
 	
 	public objetoEquipable() {
 		this.base = (int) (Math.random()*9+1);
 		setRarity();
 		setBaseFinal();
+		setmejoraAtributo();
 	}
 	
 	public int getRarity() {
@@ -60,10 +63,20 @@ public class objetoEquipable {
 	public int getBaseFinal() {
 		return baseFinal;
 	}
+	
+	public void setmejoraAtributo() {
+		atributoMejorado = atributoAzar[(int) (Math.random()*4)];
+	}
+	
+	public String getmejoraAtributo() {
+		return atributoMejorado;
+	}
+	
 	public void mostrar() {
 		System.out.println("Estadística base : "+getBase());
 		System.out.println("Estrellas : "+getRarity());
 		System.out.println("Estadística final : "+getBaseFinal());
+		System.out.println("Atributo mejorado : "+getmejoraAtributo());
 	}
 
 	}
