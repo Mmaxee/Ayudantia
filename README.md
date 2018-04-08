@@ -1,2 +1,0 @@
-# Ayudantia
-Proyecto ayudantia
