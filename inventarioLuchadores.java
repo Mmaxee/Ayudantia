@@ -22,6 +22,7 @@ public class inventarioLuchadores {
 	public void quitarLuchador(ArrayList<Luchador> luchadorsito) {
 		System.out.println("**********************************************************");
 		System.out.println("Que luchador desea eliminar, guíese por el [x]");
+		mostrarLuchadores(luchadorsito);
 		Scanner sc = new Scanner(System.in);
 		int i = sc.nextInt();
 		luchadorsito.remove(i-1);
