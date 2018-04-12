@@ -2,89 +2,54 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class inventarioLuchadores {
-
-	public static void main(String[]args) {
-		ArrayList<Luchador> luchadores = new ArrayList<>();
-		Scanner sc = new Scanner(System.in);
-		int o = 0;
-		while(o != 6){
-		System.out.println("***************************************");	
-		System.out.println("1. Agregar luchador");
-        System.out.println("2. Quitar luchador");
-        System.out.println("3. Mostrar Luchadores");
-        System.out.println("4. Ver estadísticas de un luchador");
-        System.out.println("5. Filtar por facción");
-        System.out.println("6. Filtrar por rareza");
-        System.out.println("7. Salir");
-            o = sc.nextInt();
-        switch (o) {
-            case 1:
-                agregarLuchador(luchadores);
-                System.out.println("Creación realizada :D" );
-                break;
-
-            case 2:
-            	mostrarLuchadores(luchadores);
-            	quitarLuchador(luchadores);
-                break;
-                     
-            case 3:
-               mostrarLuchadores(luchadores);
-               break;
-            
-            case 4:
-            	mostrarLuchadores(luchadores);
-            	mostrarEstadistica(luchadores);
-            	break;
-            	
-            case 5:
-            	filtroFaccion(luchadores);
-            	break;
-            	
-            case 6:
-            	filtroRarity(luchadores);
-            	break;
-            	
-            case 7:System.exit(0);
-
-                break;
-          }
-	}
-		}
+	
+	private int maxLuchadores = 25;
+	ArrayList<Luchador> luchadores = new ArrayList<>();
 		
-
-	public static void agregarLuchador(ArrayList<Luchador> luchadorsito) {
-		luchadorsito.add(new Luchador());
+	public void agregarLuchador(ArrayList<Luchador> luchadorsito) {	
+		if (luchadorsito.size()==0) { //Empieza si o si con un luchador al iniciar la partida
+			luchadorsito.add(new Luchador());
+			}
+		
+		if (luchadorsito.size()<maxLuchadores) {
+			luchadorsito.add(new Luchador());
+			}
+			else {
+				System.out.println("Inventario de luchadores lleno");
+			}
 	}
-	public static void quitarLuchador(ArrayList<Luchador> luchadorsito) {
+	
+	public void quitarLuchador(ArrayList<Luchador> luchadorsito) {
 		System.out.println("**********************************************************");
 		System.out.println("Que luchador desea eliminar, guíese por el [x]");
 		Scanner sc = new Scanner(System.in);
 		int i = sc.nextInt();
 		luchadorsito.remove(i-1);
 	}
-	public static void mostrarLuchadores(ArrayList<Luchador> luchadorsito) {
+	
+	public void mostrarLuchadores(ArrayList<Luchador> luchadorsito) {
 		for(int i=0; i<luchadorsito.size();i++) {
 			System.out.println("Luchador ["+(i+1)+"]");
 			luchadorsito.get(i).mostrarLuchador();
 		}
 	}
-	public static void mostrarEstadistica(ArrayList<Luchador> luchadorsito) {
+	
+	public void mostrarEstadistica(ArrayList<Luchador> luchadorsito) {
 		System.out.println("De que luchador desea ver sus estadísticas, guíese por el [x]");
 		Scanner sc = new Scanner(System.in);
 		int i = sc.nextInt();
 		luchadorsito.get(i-1).mostrarEstadisticas();
 	}
 	
-	public static void filtroFaccion(ArrayList<Luchador> luchadorsito) {
+	public void filtroFaccion(ArrayList<Luchador> luchadorsito) {
 		ArrayList<Luchador> faccion = new ArrayList<>();
 		String aux  ;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Filtrar por , escriba el nombre correctamente:");
-    		System.out.println("Fire");
-    		System.out.println("Water");
-    		System.out.println("Earth");
-    		aux = sc.nextLine();
+    	System.out.println("Fire");
+    	System.out.println("Water");
+    	System.out.println("Earth");
+    	aux = sc.nextLine();
     	
     		for(int i=0; i<luchadorsito.size(); i++) {
     			if(luchadorsito.get(i).getFaccion().equals(aux)) {
@@ -94,30 +59,25 @@ public class inventarioLuchadores {
     		for(int i=0; i<faccion.size();i++) {
     			System.out.println("Luchador ["+(i+1)+"]");
     			faccion.get(i).mostrarLuchador();	
-    		}
+    	}
 	}
-	
-	public static void filtroRarity(ArrayList<Luchador> luchadorsito) {
+    	
+	public void filtroRarity(ArrayList<Luchador> luchadorsito) {
 		ArrayList<Luchador> Rarity = new ArrayList<>();
 		int aux = 0 ;
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Filtrar por , guíese por [x]:");
-    		System.out.println("1 Estrella[1]");
-    		System.out.println("2 Estrellas[2]");
-    		System.out.println("3 Estrellas[3]");
-    		System.out.println("4 Estrellas[4]");
-    		System.out.println("5 Estrellas[5]");
-    		aux = sc.nextInt();
+		System.out.println("Filtrar por estrellas[x], guíese por [x]:");
+    	aux = sc.nextInt();
     	
     		for(int i=0; i<luchadorsito.size(); i++) {
-    			if(luchadorsito.get(i).getRarity() == 1) {
+    			if(luchadorsito.get(i).getRarity() == aux) {
     				Rarity.add(luchadorsito.get(i));
     				}
     			}
     		for(int i=0; i<Rarity.size();i++) {
     			System.out.println("Luchador ["+(i+1)+"]");
     			Rarity.get(i).mostrarLuchador();	
-    		}
+    				}
     	
-	    }	
-	} 
+		}	
+	}
