@@ -9,10 +9,32 @@ public class objetoEquipable {
 	private String atributoMejorado;
 	
 	public objetoEquipable() {
-		this.base = (int) (Math.random()*9+1);
+		crearObjeto();
+	}	
+		
+	public void crearObjeto() {
+		base = (int) (Math.random()*9+1);
 		setRarity();
 		setBaseFinal();
 		setmejoraAtributo();
+		tipoObjeto();
+		
+	}
+	
+	public void tipoObjeto() {
+		if (atributoMejorado.equals("Atk")) {
+			tipo = "Espada";
+		}	else if (atributoMejorado.equals("Def")) {
+			tipo = "Armadura";
+		}else if (atributoMejorado.equals("Spd")) {
+			tipo = "Botas";
+		}else if (atributoMejorado.equals("Hp")) {
+			tipo = "Accesorio";
+		}	
+	}
+	
+	public String getTipo() {
+		return tipo;
 	}
 	
 	public int getRarity() {
@@ -72,12 +94,12 @@ public class objetoEquipable {
 		return atributoMejorado;
 	}
 	
-	public void mostrar() {
-		System.out.println("Estadística base : "+getBase());
+	public void mostrarObjeto() {
+		System.out.println(getTipo());
+		System.out.println(getmejoraAtributo()+"+"+getBaseFinal());
 		System.out.println("Estrellas : "+getRarity());
-		System.out.println("Estadística final : "+getBaseFinal());
-		System.out.println("Atributo mejorado : "+getmejoraAtributo());
 	}
+
 
 	}
 	
