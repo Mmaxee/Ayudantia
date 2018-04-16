@@ -13,7 +13,7 @@ public class Luchador {
 		crearLuchador();
 	}
 	
-	public void crearLuchador() {
+	private void crearLuchador() {
 		setRarity();
 		this.atk = (nAzar.nextInt(51)+20)*(getRarity());
 		this.def = (nAzar.nextInt(21)+5)*(getRarity());
@@ -50,7 +50,7 @@ public class Luchador {
 	public int getRarity() {
 		return probabilidad
 	}
-	public void setRarity() {
+	private void setRarity() {
 		   int random= (int) (Math.random() * 100 + 1);
 	        if (random <= 40) {
 	        	probabilidad = 1;
