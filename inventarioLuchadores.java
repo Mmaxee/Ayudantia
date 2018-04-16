@@ -7,7 +7,7 @@ public class inventarioLuchadores {
 		
 	public inventarioLuchadores() {
 		maxLuchadores = 25;
-		luchadores = new ArrayList<>();
+		luchadores = new ArrayList<Luchador>();
 	}
 	
 	public ArrayList<Luchador> getLuchadores() {
