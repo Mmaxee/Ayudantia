@@ -1,0 +1,14 @@
+Analisis:
+
+1) Dependencia: La clase "Monstruo" utiliza la clase "objetoEquipable" para poder generar un objeto dropeable, la clase 
+		"objetoEquipable" no sabe de la existencia de la clase "Monstruo".
+
+2) Asociación:  -La clase "inventarioLuchadores" esta compuesta de la clase "Luchador", este ultimo no conoce la existencia de la otra
+		clase, pero el inventarioLuchadores implementa la clase Luchador con un ArrayList llamado luchadores de tipo Luchador,
+		la multiplicidad es solo 1 "invetarioLuchadores, y tendrá 1..25 luchadores de la clase "Luchador".
+
+		-La clase "inventarioObjetos" esta compuesta de la clase "objetoEquipable", este ultimo no conoce la existencia de la otra
+		clase, pero el inventarioObjetos implementa la clase objetoEquipable con un ArrayList llamado item de tipo objetoEquipable,
+		la multiplicidad es solo 1 "invetarioObjeto", y tendrá 0..10 item de la clase "objetoEquipable".
+		
+		
