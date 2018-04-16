@@ -8,7 +8,7 @@ public class Monstruo {
 		crearMonstruo();
 	}
 	
-	public void crearMonstruo() {
+	private void crearMonstruo() {
 		this.atk = (int) (Math.random()*4000+3500);
 		this.def = (int) (Math.random()*1500+1000);
 		this.def = (int) (Math.random()*25+5);
