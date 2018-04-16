@@ -5,7 +5,7 @@ public class inventarioObjetos {
 	private int maxItems = 10;
 	private ArrayList<objetoEquipable> item = new ArrayList<>();
 	
-	public void agregarItem() {
+	private void agregarItem() {
 		if (item.size()<maxItems) {
 		item.add(new objetoEquipable());
 		}
@@ -13,7 +13,7 @@ public class inventarioObjetos {
 			System.out.println("Inventario lleno");
 		}
 	}
-	public void quitarItem() {
+	private void quitarItem() {
 		System.out.println("Que item desea eliminar, guíese por el [x]");
 		mostrarItems();
 		Scanner sc = new Scanner(System.in);
