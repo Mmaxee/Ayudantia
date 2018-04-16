@@ -2,9 +2,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class inventarioObjetos {
 
-	private int maxItems = 10;
-	private ArrayList<objetoEquipable> item = new ArrayList<>();
+	private int maxItems;
+	private ArrayList<objetoEquipable> item;
 	
+	public inventarioObjetos() {
+		maxItems=10;
+		item = new ArrayList<objetoEquipable>();
+	}
 	private void agregarItem() {
 		if (item.size()<maxItems) {
 		item.add(new objetoEquipable());
