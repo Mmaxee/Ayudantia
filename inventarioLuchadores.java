@@ -2,9 +2,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class inventarioLuchadores {
-	private int maxLuchadores = 25;
-	private ArrayList<Luchador> luchadores = new ArrayList<>();
+	private int maxLuchadores;
+	private ArrayList<Luchador> luchadores;
 		
+	public inventarioLuchadores() {
+		maxLuchadores = 25;
+		luchadores = new ArrayList<>();
+	}
 	
 	public ArrayList<Luchador> getLuchadores() {
 		return luchadores;
