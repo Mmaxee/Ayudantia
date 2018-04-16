@@ -14,7 +14,7 @@ public class inventarioLuchadores {
 		this.luchadores = luchadores;
 	}
 	
-	public void agregarLuchador() {	
+	private void agregarLuchador() {	
 		if (luchadores.size()==0) { //Empieza si o si con un luchador al iniciar la partida
 			luchadores.add(new Luchador());
 			}		
@@ -25,7 +25,7 @@ public class inventarioLuchadores {
 				System.out.println("Inventario de luchadores lleno");
 			}
 	}
-	public void quitarLuchador() {
+	private void quitarLuchador() {
 		System.out.println("**********************************************************");
 		System.out.println("Que luchador desea eliminar, guíese por el [x]");
 		mostrarLuchadores();
