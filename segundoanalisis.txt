@@ -1,0 +1,30 @@
+
+
+1) Luchador con inventarioLuchadores:
+   - Relación de composición, no puede vivir sin luchadores, deja de existir el inventario.
+   - Multiplicidad de 1 a 25 luchadores a 1 inventarioLuchadores.
+
+2) objetoEquipable con inventarioObjetos:
+   - Relación de agregación, puede vivir sin objetos, ya que puede tener 0 para existir.
+   - Multiplicidad de 0 a 10 items a 1 inventarioObjetos.
+
+3) objetoEquipable con Luchador:
+   -Relación de agregación, mi luchador puede o no tener un objeto.
+   -Multiplicidad de 0 a 1 gear(equipo) a un 1 Luchador.
+
+4) objetoEquipable con Monstruo:
+   -Relación de agregación, mi monstruo tiene 3 items de tipo objetoEquipable, pero puede vivir sin ellos.
+   -Multiplicidad 3.
+
+5) Batalla con Monstruo:
+   -Relación de composición, la batalla necesita si o si 1 monstruo.
+   -Multiplicidad 1 Monstruo a 1 Batalla.
+
+6) Batalla con inventarioLuchadores:
+   -Relación de composición, la batalla necesita si o si 1 inventarioLuchadores.
+   -De este inventarioLuchadores se logra tener los 1 a 6 luchadores que se requieren para pelear.
+   -Multiplicidad 1 inventarioLuchadores a 1 Batalla.
+
+7) Batalla con Dados:
+   -Relación de uso, la batalla necesita el resultado que entrega los dados, para ser utilizado en el daño.
+
