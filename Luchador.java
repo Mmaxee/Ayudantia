@@ -101,12 +101,12 @@ public class Luchador {
 			        }
 		}
 	
-	public void equiparObjeto(Luchador luchador, objetoEquipable objeto) {
+	private void equiparObjeto(Luchador luchador, objetoEquipable objeto) {
 		setObjeto(objeto);
 		mejorasObjeto(luchador,objeto);
 	}
 	
-	public void mejorasObjeto(Luchador luchador, objetoEquipable objeto) {
+	private void mejorasObjeto(Luchador luchador, objetoEquipable objeto) {
 		if (objeto.getTipo().equals("Espada")) {
 			this.atk += objeto.getBaseFinal();
 			}
@@ -132,11 +132,11 @@ public class Luchador {
 	
 	public void mostrarLuchador() {
 	System.out.println("Nombre = "+getNombreLuchador());
-	System.out.println("Facción = "+getFaccionLuchador());
+	System.out.println("FacciÃ³n = "+getFaccionLuchador());
 	System.out.println("Estrellas = "+getRarity());
 	}
 	public void mostrarEstadisticas() {
-		System.out.println("Estadísticas:");
+		System.out.println("EstadÃ­sticas:");
 		System.out.println("Ataque = "+getAtk());
 		System.out.println("Def = "+getDef());
 		System.out.println("Speed = "+getSpd());
