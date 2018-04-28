@@ -4,10 +4,11 @@ import java.util.Scanner;
 public class inventarioLuchadores {
 	private int maxLuchadores;
 	private ArrayList<Luchador> luchadores;
-		
+	
 	public inventarioLuchadores() {
 		maxLuchadores = 25;
 		luchadores = new ArrayList<Luchador>();
+		luchadores.add(new Luchador());
 	}
 	
 	public ArrayList<Luchador> getLuchadores() {
@@ -18,10 +19,7 @@ public class inventarioLuchadores {
 		this.luchadores = luchadores;
 	}
 	
-	private void agregarLuchador() {	
-		if (luchadores.size()==0) { //Empieza si o si con un luchador al iniciar la partida
-			luchadores.add(new Luchador());
-			}		
+	public void agregarLuchador() {	
 		if (luchadores.size()<maxLuchadores) {
 			luchadores.add(new Luchador());
 			}
@@ -31,7 +29,7 @@ public class inventarioLuchadores {
 	}
 	private void quitarLuchador() {
 		System.out.println("**********************************************************");
-		System.out.println("Que luchador desea eliminar, guÃ­ese por el [x]");
+		System.out.println("Que luchador desea eliminar, guíese por el [x]");
 		mostrarLuchadores();
 		Scanner sc = new Scanner(System.in);
 		int i = sc.nextInt();
@@ -44,7 +42,7 @@ public class inventarioLuchadores {
 		}
 	}
 	public void mostrarEstadistica() {
-		System.out.println("De que luchador desea ver sus estadÃ­sticas, guÃ­ese por el [x]");
+		System.out.println("De que luchador desea ver sus estadísticas, guíese por el [x]");
 		Scanner sc = new Scanner(System.in);
 		int i = sc.nextInt();
 		luchadores.get(i-1).mostrarEstadisticas();
@@ -61,7 +59,7 @@ public class inventarioLuchadores {
     	aux = sc.nextLine();
     	
     		for(int i=0; i<luchadores.size(); i++) {
-    			if(luchadores.get(i).getFaccion().equals(aux)) {
+    			if(luchadores.get(i).getFaccionLuchador().equals(aux)) {
     				faccion.add(luchadores.get(i));
     				}
     			}
@@ -75,7 +73,7 @@ public class inventarioLuchadores {
 		ArrayList<Luchador> Rarity = new ArrayList<>();
 		int aux = 0 ;
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Filtrar por estrellas[x], guÃ­ese por [x]:");
+		System.out.println("Filtrar por estrellas[x], guíese por [x]:");
     	aux = sc.nextInt();
     	
     		for(int i=0; i<luchadores.size(); i++) {
@@ -88,5 +86,16 @@ public class inventarioLuchadores {
     			Rarity.get(i).mostrarLuchador();	
     				}
     	
-		}	
+		}
+	 public int numeroLuchadores(){
+	        return luchadores.size();
+	    }
+	 
+	 public static void main(String[]args) {
+		 inventarioLuchadores l = new inventarioLuchadores();
+		 l.agregarLuchador();
+		 l.mostrarLuchadores();
+		 l.mostrarEstadistica();
+	 }
+	 
 	}
